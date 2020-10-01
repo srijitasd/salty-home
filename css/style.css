@@ -53,9 +53,6 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-h3:hover {
-}
-
 h1 {
   font-size: 24px;
 }
@@ -346,11 +343,19 @@ body {
 -------------------------------------------------------------------*/
 
 .banner {
-  background: url(../images/banner.jpg) no-repeat center top;
+  margin-bottom: 11rem;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  background: url(../images/background/banner.jpg) no-repeat center top;
   background-attachment: fixed;
   background-size: cover;
+  filter: blur(2px);
+  width: 100%;
+  z-index: -1;
   height: 100vh;
-  min-height: 100%;
 }
 
 .banner .container,
@@ -363,7 +368,24 @@ body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
+  margin-top: 15rem;
   text-align: center;
+}
+
+@media only screen and (max-width: 840px) {
+  .banner-text {
+    margin-top: 5rem;
+  }
+
+  .banner {
+    margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .banner-text {
+    margin-top: 0rem;
+  }
 }
 .banner-cell {
   display: table-cell;
@@ -405,21 +427,6 @@ body {
   margin: 0px;
 }
 
-.book-btn a {
-  /*background:#f5672a;*/
-  color: #fff;
-  min-width: 219px;
-  padding: 10.5px 20px;
-  display: inline-block;
-  text-align: center;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-.book-btn a:hover {
-  border: 3px solid red;
-  background: none;
-}
 .hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
@@ -622,13 +629,29 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  height: 240px;
+  width: 240px;
+}
+
+@media only screen and (max-width: 470px) {
+  .about-inset {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .about-inset {
+    height: 140px;
+    width: 140px;
+  }
 }
 
 /*------------------------------------------------------------------
     SPECIAL-MENU AREA
 -------------------------------------------------------------------*/
 .special-menu {
-  background: url(../images/background-2.jpg) no-repeat center;
+  background: url(../images/background/background-2.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -897,7 +920,7 @@ body {
   outline: none;
 }
 
-.tab-menu .is-active h2 {
+.tab-menu .is-active h3 {
   color: #fff;
   border-bottom: 1px solid #fff;
   font-family: "Montserrat", sans-serif;
@@ -906,12 +929,22 @@ body {
   color: #fff;
 }
 
+.tab-menu .is-active object {
+  filter: invert();
+}
+
+.cat-icon {
+  height: 4rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
 /*------------------------------------------------------------------
     TEAM AREA
 -------------------------------------------------------------------*/
 
 .team-main {
-  background: url(../images/background-3.jpg) no-repeat center;
+  background: url(../images/background/background-3.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
@@ -1035,6 +1068,11 @@ body {
   -webkit-transition: all 0.5s ease-in;
   -ms-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
+}
+
+.chef {
+  filter: invert(0) !important;
+  margin: 0 !important;
 }
 
 /*------------------------------------------------------------------
@@ -1165,7 +1203,7 @@ body {
 -------------------------------------------------------------------*/
 
 .footer-news {
-  background: url(../images/background-4.jpg) no-repeat center;
+  background: url(../images/background/background-4.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
@@ -1276,20 +1314,20 @@ body {
       rgba(0, 0, 0, 0.57) 0%,
       rgba(0, 0, 0, 0.87) 100%
     ),
-    url(..images/footer-background.jpg);
+    url(../images/background/footer-background.jpg);
   background-image: -webkit-radial-gradient(
       center,
       ellipse cover,
       rgba(0, 0, 0, 0.57) 0%,
       rgba(0, 0, 0, 0.87) 100%
     ),
-    url(../images/footer-background.jpg);
+    url(../images/background/footer-background.jpg);
   background-image: radial-gradient(
       ellipse at center,
       rgba(0, 0, 0, 0.57) 0%,
       rgba(0, 0, 0, 0.87) 100%
     ),
-    url(../images/footer-background.jpg);
+    url(../images/background/footer-background.jpg);
   background-color: #111;
   background-position: center;
   background-repeat: no-repeat;
@@ -1408,6 +1446,18 @@ body {
   color: #666;
 }
 
+.main-contact {
+  pointer-events: none;
+}
+
+.social-icons {
+  height: 2rem;
+  filter: invert();
+  margin: 0.5rem;
+  position: relative;
+  top: 1rem;
+}
+
 /*------------------------------------------------------------------
     COPYRIGHT AREA
 -------------------------------------------------------------------*/
@@ -1426,105 +1476,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   padding-bottom: 0px;
-}
-/*------------------------------------------------------------------
-    COLOR SWITCHER AREA
--------------------------------------------------------------------*/
-
-/*--- color switcher ---*/
-
-#color-panel {
-  position: fixed;
-  width: 180px;
-  height: auto;
-  top: 150px;
-  /*min-height: 200px;*/
-  text-align: left;
-  border: 1px solid rgba(100, 100, 100, 0.55);
-  z-index: 11;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.45);
-}
-
-.close-color-panel {
-  right: -180px;
-}
-
-.open-color-panel {
-  right: -1px;
-}
-
-#color-panel .segment {
-  width: 100%;
-  padding: 15px 10px 15px 0;
-  border: 1px solid rgba(100, 100, 100, 0.55);
-  padding: 15px 25px;
-  background: rgba(50, 50, 50, 0.95);
-}
-
-#color-panel a.panel-button {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: -50px;
-  top: 30px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 47px;
-  cursor: pointer;
-  border: none;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  color: #d1d1d1;
-  background: rgba(100, 100, 100, 0.85);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#color-panel a.panel-button i {
-  padding: 7px;
-}
-
-#color-panel a.panel-button:hover {
-  color: #35cc75;
-}
-
-#color-panel h4 {
-  margin: 3px auto 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: #ffffff;
-}
-
-#color-panel .segment a.switcher {
-  width: 24px;
-  height: 35px;
-  display: inline-block;
-  margin-right: 3px;
-  margin-top: 5px;
-  border: 1px solid #efefef;
-  cursor: pointer;
-}
-
-.orange-bg {
-  background: #f5672a;
-}
-
-.strong-blue-bg {
-  background: #1e69b8;
-}
-
-.moderate-green-bg {
-  background: #8dc63f;
-}
-
-.vivid-yellow-bg {
-  background: #fdcb03;
 }
 
 .tab-title-menu > p > img {
@@ -1680,7 +1631,7 @@ body {
 }
 
 .menu-item-name {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   margin-top: 1rem;
   color: #f5672a;
   font-family: "Lobster Two", cursive;
@@ -1693,4 +1644,16 @@ body {
 
 .thumb > img {
   width: 100%;
+}
+
+.menu-cuisine {
+  font-family: "Roboto", sans-serif;
+
+  padding: 0rem 1rem;
+}
+
+.menu-cuisine > h4 {
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: underline;
 }

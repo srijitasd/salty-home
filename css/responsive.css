@@ -75,13 +75,7 @@
   .offer-item div h3 {
     font-size: 16px;
   }
-  .blog-dit {
-    padding: 15px 2% 0 2%;
-  }
-  .blog-dit h2 {
-    font-size: 18px;
-    padding: 10px 0px 13px 0px;
-  }
+
   .banner-cell .mouse {
     display: none;
   }
@@ -191,13 +185,10 @@
     margin: 0px 0px;
   }
   .banner {
-    min-height: 800px !important;
+    min-height: 100vh !important;
     background-size: inherit;
   }
   .team-main {
-    background-size: inherit;
-  }
-  .blog-main {
     background-size: inherit;
   }
   .special-menu {
@@ -245,17 +236,13 @@
   .tab-title-menu h2 {
     font-size: 14px;
   }
-  [class^="flaticon-"]::before,
-  [class*=" flaticon-"]::before,
-  [class^="flaticon-"]::after,
-  [class*=" flaticon-"]::after {
-    font-size: 35px;
-  }
+
   .tab-menu .slick-arrow.slick-prev {
     position: absolute;
     top: 21px;
     left: -17px;
     z-index: 99;
+    transform: scale(0.9);
     background: url(../images/back.png) no-repeat center;
     text-indent: -99999px;
     border: none;
@@ -271,8 +258,9 @@
   .tab-menu .slick-arrow.slick-next {
     position: absolute;
     top: 20px;
-    left: 32.5rem;
+    left: 27.5rem;
     z-index: 99;
+    transform: scale(0.9);
     background: url(../images/next.png) no-repeat center;
     text-indent: -99999px;
     border: none;
@@ -288,19 +276,11 @@
   .sf-team {
     margin-bottom: 20px;
   }
-  .blog-img-box {
-    float: none;
-    width: 100%;
-  }
   .pricing-main p {
     padding: 0px 15px;
     margin-bottom: 15px;
   }
 
-  .blog-dit {
-    width: 100%;
-    padding: 10px 2% 0 2%;
-  }
   .form-reservations-box {
     width: 100%;
   }
@@ -340,5 +320,9 @@
     align-self: center;
     justify-self: right;
     margin-top: 1rem !important;
+  }
+
+  .tab-title-menu > h3 {
+    font-size: 1.3rem;
   }
 }

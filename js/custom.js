@@ -111,7 +111,7 @@ $(".slider-nav")
         },
       },
       {
-        breakpoint: 400,
+        breakpoint: 370,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,

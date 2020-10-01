@@ -13,16 +13,7 @@
 .banner-text h2 {
   color: #f5672a;
 }
-.book-btn a {
-  background: #f5672a;
-  border: 3px solid #f5672a;
-}
-.book-btn a:hover {
-  border: 3px solid #f04900;
-}
-.hvr-underline-from-center::before {
-  background: #f04900;
-}
+
 .block-title {
   color: #f5672a;
 }
@@ -59,14 +50,6 @@
   border: 1px solid #f5672a;
   color: #f5672a;
 }
-.blog-btn-v a {
-  background: #f5672a;
-  border: 3px solid #f5672a;
-}
-.book-srv a {
-  background: #f5672a;
-  border: 3px solid #f5672a;
-}
 
 .panel-pricing .panel-heading {
   background: #f5672a;
@@ -85,13 +68,6 @@
   border: 3px solid #f04900;
 }
 
-.reserve-book-btn button {
-  background: #f5672a;
-  border: 3px solid #f5672a;
-}
-.reserve-book-btn button:hover a {
-  color: #000000;
-}
 .footer-news form a {
   background: #f5672a;
 }
