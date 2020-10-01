@@ -1,3 +1,8 @@
+const loader = document.querySelector("#loader");
+document.addEventListener("DOMContentLoaded", () => {
+  loader.style.display = "none";
+});
+
 /******************************************
     File Name: custom.js
     Template Name: Landigoo
@@ -144,11 +149,6 @@ new WOW().init();
 /* ==============================================
 			PRELOADER
     =============================================== */
-
-const loader = document.querySelector("#loader");
-document.addEventListener("DOMContentLoaded", () => {
-  loader.classList.add("fade");
-});
 
 /* ==============================================
 			SCROLL UP
