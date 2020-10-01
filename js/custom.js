@@ -1,8 +1,3 @@
-const loader = document.querySelector("#loader");
-document.addEventListener("DOMContentLoaded", () => {
-  loader.style.display = "none";
-});
-
 /******************************************
     File Name: custom.js
     Template Name: Landigoo
