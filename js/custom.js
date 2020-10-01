@@ -11,11 +11,6 @@
 			SMOOTH SCROLL 
 		=============================================== */
 
-const loader = document.querySelector("#loader");
-document.addEventListener("DOMContentLoaded", () => {
-  loader.style.display = "none";
-});
-
 const navbarToggle = document.querySelector(".nav-button");
 const sideMenu = document.querySelector(".side-nav");
 console.log(sideMenu);
@@ -148,7 +143,12 @@ new WOW().init();
 
 /* ==============================================
 			PRELOADER
-		=============================================== */
+    =============================================== */
+
+const loader = document.querySelector("#loader");
+document.addEventListener("DOMContentLoaded", () => {
+  loader.classList.add("fade");
+});
 
 /* ==============================================
 			SCROLL UP
