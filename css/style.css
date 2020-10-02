@@ -1529,6 +1529,7 @@ body {
   align-self: center;
   padding: 0%;
   margin-left: 1rem;
+  margin-top: 1rem !important;
   position: relative;
   color: white;
   top: 0.25rem;
