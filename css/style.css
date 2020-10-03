@@ -344,7 +344,7 @@ body {
 .banner::before {
   content: "";
   position: absolute;
-  background: url(../images/background/banner.jpg) no-repeat center top;
+  background: url(../images/background/banner.webp) no-repeat center top;
   background-attachment: fixed;
   background-size: cover;
   filter: blur(2px);
@@ -646,7 +646,7 @@ body {
     SPECIAL-MENU AREA
 -------------------------------------------------------------------*/
 .special-menu {
-  background: url(../images/background/background-2.jpg) no-repeat center;
+  background: url(../images/background/background-2.webp) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -939,7 +939,7 @@ body {
 -------------------------------------------------------------------*/
 
 .team-main {
-  background: url(../images/background/background-3.jpg) no-repeat center;
+  background: url(../images/background/background-3.webp) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
@@ -1198,7 +1198,7 @@ body {
 -------------------------------------------------------------------*/
 
 .footer-news {
-  background: url(../images/background/background-4.jpg) no-repeat center;
+  background: url(../images/background/background-4.webp) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
@@ -1309,20 +1309,20 @@ body {
       rgba(0, 0, 0, 0.57) 0%,
       rgba(0, 0, 0, 0.87) 100%
     ),
-    url(../images/background/footer-background.jpg);
+    url(../images/background/footer-background.webp);
   background-image: -webkit-radial-gradient(
       center,
       ellipse cover,
       rgba(0, 0, 0, 0.57) 0%,
       rgba(0, 0, 0, 0.87) 100%
     ),
-    url(../images/background/footer-background.jpg);
+    url(../images/background/footer-background.webp);
   background-image: radial-gradient(
       ellipse at center,
       rgba(0, 0, 0, 0.57) 0%,
       rgba(0, 0, 0, 0.87) 100%
     ),
-    url(../images/background/footer-background.jpg);
+    url(../images/background/footer-background.webp);
   background-color: #111;
   background-position: center;
   background-repeat: no-repeat;
