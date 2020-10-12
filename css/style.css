@@ -1359,6 +1359,7 @@ body {
 }
 .accidental {
   color: white;
+  font-size: 6rem;
 }
 @media only screen and (max-width: 768px) {
   .banner-cell {
@@ -1405,7 +1406,7 @@ body {
   }
   .accidental {
     margin-top: 2rem;
-    font-size: 3.4rem;
+    font-size: 4rem;
   }
 }
 .footer-cards {
